@@ -12,7 +12,7 @@ bot = Bot(token=TOKEN)  # Создаем объект бота
 dp = Dispatcher(bot)  # Создаем диспетчер для обработки сообщений бота
 
 
-conn = sqlite3.connect('grades.db')  # Создаем базу данных SQLite
+conn = sqlite3.connect('grades.db')  # Создаем базу данных sqlite
 cur = conn.cursor()
 
 
