@@ -4,7 +4,6 @@ from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
 import random
 from config import TOKEN
-import buttons
 
 
 bot = Bot(token=TOKEN)  # Создаем объект бота
@@ -23,6 +22,7 @@ cur.execute('''CREATE TABLE IF NOT EXISTS grades
 
 subjects = ['Математика', 'Русский язык', 'История', 'Физика', 'Английский язык']
 students = ['Иванов', 'Петров', 'Сидоров', 'Кузнецов', 'Соколов', 'Попов', 'Лебедев', 'Козлов', 'Новиков', 'Морозов']
+
 
 for student in students:
     for subject in subjects:
@@ -66,5 +66,6 @@ async def select_student(message: types.Message):
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
 
+    
 # Закрываем соединение с базой данных
 conn.close()
